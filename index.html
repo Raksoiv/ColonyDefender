@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Colony Defender</title>
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body onload="start();">
+	</body>
+	<script type="text/javascript">
+		function start(){
+			this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'game_div');
+
+			this.game.state.add('Boot', BasicGame.Boot);
+			this.game.state.add('Game', BasicGame.Game);
+
+			this.game.state.start('Boot');
+		}
+	</script>
+</html>
